@@ -1,3 +1,4 @@
+name: Lint
 on:
   push:
     branches:
@@ -15,6 +16,8 @@ jobs:
         cache: 'npm'
     - name: Install Dependencies
       run: npm install
+      if: github.branche == 'feat/build1'
     - name: Lint
       run: npm run lint
+      if: github.branche == 'feat/build'
  
