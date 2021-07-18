@@ -2,8 +2,7 @@ name: Lint
 on:
   push:
     branches:
-      - 'feat/**'
-      - 'fix/**'
+      - '!master'
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -16,8 +15,6 @@ jobs:
         cache: 'npm'
     - name: Install Dependencies
       run: npm install
-      if: github.branche == 'feat/build1'
     - name: Lint
       run: npm run lint
-      if: github.branche == 'feat/build'
  
