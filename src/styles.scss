@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+$color-primary: lightblue;
+$color-bg: steelblue;
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-bg: #{$color-bg};
+}
+
+body {
+  margin: 0;
+}
+
+button {
+
+  cursor: pointer;
+
+  &:active {
+    transform: scale(.98);
+  }
+
+  &[color=primary] {
+    color: black;
+    background: var(--color-primary);
+
+    &:hover {
+      background-color: lighten($color-primary, 10%);
+    }
+
+  }
+
+}

@@ -1,0 +1,23 @@
+<form class="login-panel">
+  <h1>Please Login</h1>
+
+  <div class="form-item">
+    <input type="text" required>
+    <label>
+      <span *ngFor="let char of 'Email' | stringArray;let i = index"
+            [style.transition-delay]="i * 50 + 'ms'">{{char}}</span>
+    </label>
+  </div>
+
+  <div class="form-item">
+    <input type="password" required>
+    <label>
+      <span *ngFor="let char of 'Password' | stringArray;let i = index"
+            [style.transition-delay]="i * 50 + 'ms'">{{char}}</span>
+    </label>
+  </div>
+
+  <button color="primary">Login</button>
+
+  <div class="register">Don't have an account?<a>Register</a></div>
+</form>
