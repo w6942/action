@@ -2,7 +2,7 @@
   <h1>Please Login</h1>
 
   <div class="form-item">
-    <input type="text" required>
+    <input type="text" placeholder=" " required>
     <label>
       <span *ngFor="let char of 'Email' | stringArray;let i = index"
             [style.transition-delay]="i * 50 + 'ms'">{{char}}</span>
@@ -10,7 +10,7 @@
   </div>
 
   <div class="form-item">
-    <input type="password" required>
+    <input type="password" placeholder=" " required>
     <label>
       <span *ngFor="let char of 'Password' | stringArray;let i = index"
             [style.transition-delay]="i * 50 + 'ms'">{{char}}</span>
